@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"math"
 )
 
 // example taking parameters type int and returning an int
@@ -22,6 +23,20 @@ func add_named(x, y int)(r int) {
 	return
 }
 
+func for_example() int {
+	sum := 0
+	for i := 0; i < 10; i++ {
+		sum += i
+	}
+	return sum
+}
+
+func if_example(x int) int{
+	if x > 5 {
+		return 10
+	}
+	return 0
+}
 
 func main() {
 	fmt.Println("My favorite number is", rand.Intn(10))
@@ -34,5 +49,13 @@ func main() {
 	var a3 int
 	a3 = 3
 	fmt.Println(a1, a2, a3)
+
+	// constant declaration example
+	const Pi = 3.14
+
+	for_result := for_example()
+	if_result := if_example(6)
+
+	println(for_result, if_result)
 
 }
